@@ -237,7 +237,8 @@ resource "google_sql_database_instance" "default" {
   lifecycle {
     ignore_changes = [
       replication_cluster[0].psa_write_endpoint,
-      settings[0].disk_size
+      settings[0].disk_size,
+      settings[0].version
     ]
   }
 
